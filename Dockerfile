@@ -4,7 +4,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 WORKDIR /botamusique
 
 RUN apt-get update \
-    && apt-get install --no-install-recommends -y gcc g++ ffmpeg libjpeg-dev libmagic-dev opus-tools zlib1g-dev python3 \
+    && apt-get install --no-install-recommends -y gcc g++ ffmpeg libjpeg-dev libmagic-dev opus-tools zlib1g-dev python3 python3-pip \
     && rm -rf /var/lib/apt/lists/*
 COPY . /botamusique
 RUN python3 -m venv venv \
